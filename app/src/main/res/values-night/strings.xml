@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="upcoming_tab">Upcoming</string>
+    <string name="company_name">SpaceX</string>
+    <string name="launches_tab">Launches</string>
+    <string name="rockets_tab">Rockets</string>
+</resources>
