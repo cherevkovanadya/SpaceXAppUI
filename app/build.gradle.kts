@@ -48,6 +48,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("androidx.cardview:cardview:1.0.0")
-    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.androidx.cardview)
 }
