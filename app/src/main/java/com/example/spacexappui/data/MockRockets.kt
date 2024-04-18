@@ -1,4 +1,6 @@
-package com.example.spacexappui
+package com.example.spacexappui.data
+
+import com.example.spacexappui.R
 
 object MockRockets {
     val mockRocketLaunches = mutableListOf<Rocket>(

@@ -4,4 +4,10 @@
     <string name="company_name">SpaceX</string>
     <string name="launches_tab">Launches</string>
     <string name="rockets_tab">Rockets</string>
+    <string name="rocket_cover_description">Rocket Cover</string>
+    <string name="count_down_text">COUNT DOWN</string>
+    <string name="launch_site_text">LAUNCH SITE</string>
+    <string name="launch_date_text">LAUNCH DATE</string>
+    <string name="launch_text">LAUNCH</string>
+    <string name="rocket_text">ROCKET</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.spacexappui
+package com.example.spacexappui.data
 
 data class Rocket (
     val rocketCover: Int,

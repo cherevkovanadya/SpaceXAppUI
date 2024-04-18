@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_tab_from_screen_borders">23dp</dimen>
+    <dimen name="image_size">85dp</dimen>
+    <dimen name="info_heading_text_size">10sp</dimen>
+    <dimen name="upcoming_info_text_size">16sp</dimen>
+</resources>
