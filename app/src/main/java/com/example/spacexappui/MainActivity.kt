@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.spacexappui.MockRockets.mockRocketLaunches
 import com.example.spacexappui.MockRockets.mockRockets
@@ -25,46 +26,53 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rocketLaunchesRecyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.rocketLaunchesRecyclerView.adapter = rocketLaunchesAdapter
-        rocketLaunchesAdapter.rockets = rocketLaunches
-        rocketLaunchesAdapter.notifyDataSetChanged()
-
-        binding.rocketsRecyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.rocketsRecyclerView.adapter = rocketsAdapter
-        rocketsAdapter.rockets = rockets
-        rocketsAdapter.notifyDataSetChanged()
+        initRocketLaunchesRecyclerView()
+        initRocketsRecyclerView()
 
         binding.upcomingTextView.setOnClickListener {
-            binding.launchCardView.visibility = View.VISIBLE
-            binding.upcomingDetails.visibility = View.VISIBLE
-            binding.rocketLaunchesRecyclerView.visibility = View.GONE
-            binding.rocketsRecyclerView.visibility = View.GONE
+            binding.launchCardView.isVisible = true
+            binding.upcomingDetails.isVisible = true
+            binding.rocketLaunchesRecyclerView.isVisible = false
+            binding.rocketsRecyclerView.isVisible = false
             binding.launchesTextView.setTextColor(getColor(R.color.black))
             binding.upcomingTextView.setTextColor(getColor(R.color.pink))
             binding.rocketsTextView.setTextColor(getColor(R.color.black))
         }
 
         binding.launchesTextView.setOnClickListener {
-            binding.launchCardView.visibility = View.GONE
-            binding.upcomingDetails.visibility = View.GONE
-            binding.rocketLaunchesRecyclerView.visibility = View.VISIBLE
-            binding.rocketsRecyclerView.visibility = View.GONE
+            binding.launchCardView.isVisible = false
+            binding.upcomingDetails.isVisible = false
+            binding.rocketLaunchesRecyclerView.isVisible = true
+            binding.rocketsRecyclerView.isVisible = false
             binding.upcomingTextView.setTextColor(getColor(R.color.black))
             binding.launchesTextView.setTextColor(getColor(R.color.pink))
             binding.rocketsTextView.setTextColor(getColor(R.color.black))
         }
 
         binding.rocketsTextView.setOnClickListener {
-            binding.launchCardView.visibility = View.GONE
-            binding.upcomingDetails.visibility = View.GONE
-            binding.rocketLaunchesRecyclerView.visibility = View.GONE
-            binding.rocketsRecyclerView.visibility = View.VISIBLE
+            binding.launchCardView.isVisible = false
+            binding.upcomingDetails.isVisible = false
+            binding.rocketLaunchesRecyclerView.isVisible = false
+            binding.rocketsRecyclerView.isVisible = true
             binding.upcomingTextView.setTextColor(getColor(R.color.black))
             binding.launchesTextView.setTextColor(getColor(R.color.black))
             binding.rocketsTextView.setTextColor(getColor(R.color.pink))
         }
+    }
+
+    private fun initRocketLaunchesRecyclerView(){
+        binding.rocketLaunchesRecyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.rocketLaunchesRecyclerView.adapter = rocketLaunchesAdapter
+        rocketLaunchesAdapter.rockets = rocketLaunches
+        rocketLaunchesAdapter.notifyDataSetChanged()
+    }
+
+    private fun initRocketsRecyclerView(){
+        binding.rocketsRecyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.rocketsRecyclerView.adapter = rocketsAdapter
+        rocketsAdapter.rockets = rockets
+        rocketsAdapter.notifyDataSetChanged()
     }
 }
