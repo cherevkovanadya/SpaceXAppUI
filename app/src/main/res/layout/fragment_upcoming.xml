@@ -38,8 +38,9 @@
                     android:id="@+id/crsImageView"
                     android:layout_width="@dimen/image_size"
                     android:layout_height="@dimen/image_size"
-                    android:layout_marginVertical="12dp"
-                    android:layout_marginStart="25dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="21dp"
                     android:contentDescription="@string/rocket_cover_description"
                     android:scaleType="centerCrop"
                     android:src="@drawable/crs"
@@ -51,6 +52,7 @@
                     android:id="@+id/launchTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
                     android:fontFamily="@font/product_sans_medium"
                     android:text="@string/launch_text"
                     android:textColor="@color/pink"
@@ -58,7 +60,7 @@
                     app:layout_constraintBottom_toTopOf="@id/rocketNameTextView"
                     app:layout_constraintStart_toEndOf="@id/centerDivider"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="spread" />
+                    app:layout_constraintVertical_chainStyle="spread_inside" />
 
                 <TextView
                     android:id="@+id/rocketNameTextView"
@@ -85,7 +87,7 @@
                     android:id="@+id/launchDateTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginBottom="16dp"
                     android:text="16-10-2016"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -97,8 +99,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="28dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="27dp"
+            android:layout_marginTop="53dp"
             android:fontFamily="@font/product_sans_medium"
             android:text="@string/launch_date_text"
             android:textColor="@color/pink"
@@ -108,15 +110,16 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="28dp"
-            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="27dp"
+            android:layout_marginTop="11dp"
             android:text="Thu Oct 17 5:30:00 2019"
             android:textSize="@dimen/upcoming_info_text_size" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="28dp"
+            android:layout_marginHorizontal="27dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/product_sans_medium"
             android:text="@string/launch_site_text"
             android:textColor="@color/pink"
@@ -125,15 +128,16 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="28dp"
-            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="27dp"
+            android:layout_marginTop="11dp"
             android:text="Cape Canaveral Air Force Station Space Launch Complex 40"
             android:textSize="@dimen/upcoming_info_text_size" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="28dp"
+            android:layout_marginHorizontal="27dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/product_sans_medium"
             android:text="@string/count_down_text"
             android:textColor="@color/pink"
@@ -142,8 +146,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="28dp"
-            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="27dp"
+            android:layout_marginVertical="11dp"
             android:text="5 Hrs 30mins more..."
             android:textSize="@dimen/upcoming_info_text_size" />
     </LinearLayout>

@@ -6,7 +6,7 @@
     style="@style/RocketCardStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="15dp">
+    android:layout_marginBottom="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,8 +23,9 @@
             android:id="@+id/rocketCoverImageView"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
-            android:layout_marginVertical="12dp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="21dp"
             android:contentDescription="@string/rocket_cover_description"
             android:scaleType="centerCrop"
             android:src="@drawable/crs"
@@ -36,6 +37,7 @@
             android:id="@+id/launchTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
             android:fontFamily="@font/product_sans_medium"
             android:text="@string/launch_text"
             android:textColor="@color/pink"
@@ -43,7 +45,7 @@
             app:layout_constraintBottom_toTopOf="@id/rocketNameTextView"
             app:layout_constraintStart_toEndOf="@id/centerDivider"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="spread" />
+            app:layout_constraintVertical_chainStyle="spread_inside" />
 
         <TextView
             android:id="@+id/rocketNameTextView"
@@ -68,7 +70,7 @@
             android:id="@+id/launchDateTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="16dp"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/centerDivider"
